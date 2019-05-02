@@ -1,0 +1,6 @@
+framework module Pods_PttMonkeysTicketCrawlerUITests {
+  umbrella header "Pods-PttMonkeysTicketCrawlerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

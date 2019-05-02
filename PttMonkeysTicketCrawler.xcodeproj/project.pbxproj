@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03ADA3A7F50773F2C67F0083 /* Pods_PttMonkeysTicketCrawler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383E0D5EACEABF543458AD44 /* Pods_PttMonkeysTicketCrawler.framework */; };
+		102F893CF1B60834C1D06840 /* Pods_PttMonkeysTicketCrawlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69918542A831C621CD78924 /* Pods_PttMonkeysTicketCrawlerTests.framework */; };
+		CD037D932272D2C0003CE32A /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD037D922272D2C0003CE32A /* DatePickerViewController.swift */; };
+		CD037D952272E601003CE32A /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD037D942272E601003CE32A /* DateSelectorView.swift */; };
+		CD037D972272EA00003CE32A /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD037D962272EA00003CE32A /* Date+Ext.swift */; };
+		CD0C8C3E226988F500F2EB4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C8C3D226988F500F2EB4F /* AppDelegate.swift */; };
+		CD0C8C40226988F500F2EB4F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C8C3F226988F500F2EB4F /* MainViewController.swift */; };
+		CD0C8C45226988F700F2EB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0C8C44226988F700F2EB4F /* Assets.xcassets */; };
+		CD0C8C48226988F700F2EB4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0C8C46226988F700F2EB4F /* LaunchScreen.storyboard */; };
+		CD0C8C53226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C8C52226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.swift */; };
+		CD0C8C5E226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C8C5D226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.swift */; };
+		CDB192BF2276C2E700D11BAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB192BE2276C2E700D11BAB /* Alamofire.framework */; };
+		CDB192C12276C2E700D11BAB /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB192C02276C2E700D11BAB /* Kanna.framework */; };
+		D6CE49CC18C45EF308463D24 /* Pods_PttMonkeysTicketCrawlerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3E00A5834E3FC7A092170E /* Pods_PttMonkeysTicketCrawlerUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD0C8C4F226988F700F2EB4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0C8C32226988F500F2EB4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD0C8C39226988F500F2EB4F;
+			remoteInfo = PttMonkeysTicketCrawler;
+		};
+		CD0C8C5A226988F700F2EB4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0C8C32226988F500F2EB4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD0C8C39226988F500F2EB4F;
+			remoteInfo = PttMonkeysTicketCrawler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19EDD0F7733F598730BE4418 /* Pods-PttMonkeysTicketCrawlerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMonkeysTicketCrawlerUITests.debug.xcconfig"; path = "Target Support Files/Pods-PttMonkeysTicketCrawlerUITests/Pods-PttMonkeysTicketCrawlerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		28F8E6DC9EE72D2A1C39F789 /* Pods-PttMonkeysTicketCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMonkeysTicketCrawler.release.xcconfig"; path = "Target Support Files/Pods-PttMonkeysTicketCrawler/Pods-PttMonkeysTicketCrawler.release.xcconfig"; sourceTree = "<group>"; };
+		322833D09154545EBB3EE466 /* Pods-PttMonkeysTicketCrawler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMonkeysTicketCrawler.debug.xcconfig"; path = "Target Support Files/Pods-PttMonkeysTicketCrawler/Pods-PttMonkeysTicketCrawler.debug.xcconfig"; sourceTree = "<group>"; };
+		383E0D5EACEABF543458AD44 /* Pods_PttMonkeysTicketCrawler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PttMonkeysTicketCrawler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		603E62213E9CF05030323E87 /* Pods-PttMonkeysTicketCrawlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMonkeysTicketCrawlerTests.release.xcconfig"; path = "Target Support Files/Pods-PttMonkeysTicketCrawlerTests/Pods-PttMonkeysTicketCrawlerTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D00CEE9C5F10733736DE61A /* Pods-PttMonkeysTicketCrawlerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMonkeysTicketCrawlerUITests.release.xcconfig"; path = "Target Support Files/Pods-PttMonkeysTicketCrawlerUITests/Pods-PttMonkeysTicketCrawlerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF3E00A5834E3FC7A092170E /* Pods_PttMonkeysTicketCrawlerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PttMonkeysTicketCrawlerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD037D922272D2C0003CE32A /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		CD037D942272E601003CE32A /* DateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorView.swift; sourceTree = "<group>"; };
+		CD037D962272EA00003CE32A /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		CD0C8C3A226988F500F2EB4F /* PttMonkeysTicketCrawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PttMonkeysTicketCrawler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0C8C3D226988F500F2EB4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD0C8C3F226988F500F2EB4F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CD0C8C44226988F700F2EB4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD0C8C47226988F700F2EB4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD0C8C49226988F700F2EB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0C8C4E226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PttMonkeysTicketCrawlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0C8C52226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PttMonkeysTicketCrawlerTests.swift; sourceTree = "<group>"; };
+		CD0C8C54226988F700F2EB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0C8C59226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PttMonkeysTicketCrawlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0C8C5D226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PttMonkeysTicketCrawlerUITests.swift; sourceTree = "<group>"; };
+		CD0C8C5F226988F700F2EB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB192BE2276C2E700D11BAB /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB192C02276C2E700D11BAB /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69918542A831C621CD78924 /* Pods_PttMonkeysTicketCrawlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PttMonkeysTicketCrawlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27A3191DBD1A428D685B301 /* Pods-PttMonkeysTicketCrawlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PttMonkeysTicketCrawlerTests.debug.xcconfig"; path = "Target Support Files/Pods-PttMonkeysTicketCrawlerTests/Pods-PttMonkeysTicketCrawlerTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD0C8C37226988F500F2EB4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB192BF2276C2E700D11BAB /* Alamofire.framework in Frameworks */,
+				CDB192C12276C2E700D11BAB /* Kanna.framework in Frameworks */,
+				03ADA3A7F50773F2C67F0083 /* Pods_PttMonkeysTicketCrawler.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C8C4B226988F700F2EB4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				102F893CF1B60834C1D06840 /* Pods_PttMonkeysTicketCrawlerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C8C56226988F700F2EB4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6CE49CC18C45EF308463D24 /* Pods_PttMonkeysTicketCrawlerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5EF85CEC54D25F010DFD707 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				322833D09154545EBB3EE466 /* Pods-PttMonkeysTicketCrawler.debug.xcconfig */,
+				28F8E6DC9EE72D2A1C39F789 /* Pods-PttMonkeysTicketCrawler.release.xcconfig */,
+				F27A3191DBD1A428D685B301 /* Pods-PttMonkeysTicketCrawlerTests.debug.xcconfig */,
+				603E62213E9CF05030323E87 /* Pods-PttMonkeysTicketCrawlerTests.release.xcconfig */,
+				19EDD0F7733F598730BE4418 /* Pods-PttMonkeysTicketCrawlerUITests.debug.xcconfig */,
+				6D00CEE9C5F10733736DE61A /* Pods-PttMonkeysTicketCrawlerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CD0C8C31226988F500F2EB4F = {
+			isa = PBXGroup;
+			children = (
+				CD0C8C3C226988F500F2EB4F /* PttMonkeysTicketCrawler */,
+				CD0C8C51226988F700F2EB4F /* PttMonkeysTicketCrawlerTests */,
+				CD0C8C5C226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests */,
+				CD0C8C3B226988F500F2EB4F /* Products */,
+				CD4345942269B66D00BA646B /* Frameworks */,
+				A5EF85CEC54D25F010DFD707 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CD0C8C3B226988F500F2EB4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C8C3A226988F500F2EB4F /* PttMonkeysTicketCrawler.app */,
+				CD0C8C4E226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.xctest */,
+				CD0C8C59226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD0C8C3C226988F500F2EB4F /* PttMonkeysTicketCrawler */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C8C3D226988F500F2EB4F /* AppDelegate.swift */,
+				CD0C8C3F226988F500F2EB4F /* MainViewController.swift */,
+				CD0C8C44226988F700F2EB4F /* Assets.xcassets */,
+				CD0C8C46226988F700F2EB4F /* LaunchScreen.storyboard */,
+				CD0C8C49226988F700F2EB4F /* Info.plist */,
+				CD037D922272D2C0003CE32A /* DatePickerViewController.swift */,
+				CD037D942272E601003CE32A /* DateSelectorView.swift */,
+				CD037D962272EA00003CE32A /* Date+Ext.swift */,
+			);
+			path = PttMonkeysTicketCrawler;
+			sourceTree = "<group>";
+		};
+		CD0C8C51226988F700F2EB4F /* PttMonkeysTicketCrawlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C8C52226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.swift */,
+				CD0C8C54226988F700F2EB4F /* Info.plist */,
+			);
+			path = PttMonkeysTicketCrawlerTests;
+			sourceTree = "<group>";
+		};
+		CD0C8C5C226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C8C5D226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.swift */,
+				CD0C8C5F226988F700F2EB4F /* Info.plist */,
+			);
+			path = PttMonkeysTicketCrawlerUITests;
+			sourceTree = "<group>";
+		};
+		CD4345942269B66D00BA646B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDB192BE2276C2E700D11BAB /* Alamofire.framework */,
+				CDB192C02276C2E700D11BAB /* Kanna.framework */,
+				383E0D5EACEABF543458AD44 /* Pods_PttMonkeysTicketCrawler.framework */,
+				D69918542A831C621CD78924 /* Pods_PttMonkeysTicketCrawlerTests.framework */,
+				AF3E00A5834E3FC7A092170E /* Pods_PttMonkeysTicketCrawlerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD0C8C39226988F500F2EB4F /* PttMonkeysTicketCrawler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0C8C62226988F700F2EB4F /* Build configuration list for PBXNativeTarget "PttMonkeysTicketCrawler" */;
+			buildPhases = (
+				1A4E44788C3B724132950C7C /* [CP] Check Pods Manifest.lock */,
+				CD0C8C36226988F500F2EB4F /* Sources */,
+				CD0C8C37226988F500F2EB4F /* Frameworks */,
+				CD0C8C38226988F500F2EB4F /* Resources */,
+				420E6CC73BA151A638911CCA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PttMonkeysTicketCrawler;
+			productName = PttMonkeysTicketCrawler;
+			productReference = CD0C8C3A226988F500F2EB4F /* PttMonkeysTicketCrawler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD0C8C4D226988F700F2EB4F /* PttMonkeysTicketCrawlerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0C8C65226988F700F2EB4F /* Build configuration list for PBXNativeTarget "PttMonkeysTicketCrawlerTests" */;
+			buildPhases = (
+				F0ACB4D9C3FE82CF29283430 /* [CP] Check Pods Manifest.lock */,
+				CD0C8C4A226988F700F2EB4F /* Sources */,
+				CD0C8C4B226988F700F2EB4F /* Frameworks */,
+				CD0C8C4C226988F700F2EB4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0C8C50226988F700F2EB4F /* PBXTargetDependency */,
+			);
+			name = PttMonkeysTicketCrawlerTests;
+			productName = PttMonkeysTicketCrawlerTests;
+			productReference = CD0C8C4E226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD0C8C58226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0C8C68226988F700F2EB4F /* Build configuration list for PBXNativeTarget "PttMonkeysTicketCrawlerUITests" */;
+			buildPhases = (
+				9199A7AEDB48D80B90EBAB21 /* [CP] Check Pods Manifest.lock */,
+				CD0C8C55226988F700F2EB4F /* Sources */,
+				CD0C8C56226988F700F2EB4F /* Frameworks */,
+				CD0C8C57226988F700F2EB4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0C8C5B226988F700F2EB4F /* PBXTargetDependency */,
+			);
+			name = PttMonkeysTicketCrawlerUITests;
+			productName = PttMonkeysTicketCrawlerUITests;
+			productReference = CD0C8C59226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD0C8C32226988F500F2EB4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "marcus fu";
+				TargetAttributes = {
+					CD0C8C39226988F500F2EB4F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CD0C8C4D226988F700F2EB4F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CD0C8C39226988F500F2EB4F;
+					};
+					CD0C8C58226988F700F2EB4F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CD0C8C39226988F500F2EB4F;
+					};
+				};
+			};
+			buildConfigurationList = CD0C8C35226988F500F2EB4F /* Build configuration list for PBXProject "PttMonkeysTicketCrawler" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD0C8C31226988F500F2EB4F;
+			productRefGroup = CD0C8C3B226988F500F2EB4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD0C8C39226988F500F2EB4F /* PttMonkeysTicketCrawler */,
+				CD0C8C4D226988F700F2EB4F /* PttMonkeysTicketCrawlerTests */,
+				CD0C8C58226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD0C8C38226988F500F2EB4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0C8C48226988F700F2EB4F /* LaunchScreen.storyboard in Resources */,
+				CD0C8C45226988F700F2EB4F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C8C4C226988F700F2EB4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C8C57226988F700F2EB4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A4E44788C3B724132950C7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PttMonkeysTicketCrawler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		420E6CC73BA151A638911CCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PttMonkeysTicketCrawler/Pods-PttMonkeysTicketCrawler-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PttMonkeysTicketCrawler/Pods-PttMonkeysTicketCrawler-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PttMonkeysTicketCrawler/Pods-PttMonkeysTicketCrawler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9199A7AEDB48D80B90EBAB21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PttMonkeysTicketCrawlerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0ACB4D9C3FE82CF29283430 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PttMonkeysTicketCrawlerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD0C8C36226988F500F2EB4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0C8C40226988F500F2EB4F /* MainViewController.swift in Sources */,
+				CD037D932272D2C0003CE32A /* DatePickerViewController.swift in Sources */,
+				CD0C8C3E226988F500F2EB4F /* AppDelegate.swift in Sources */,
+				CD037D952272E601003CE32A /* DateSelectorView.swift in Sources */,
+				CD037D972272EA00003CE32A /* Date+Ext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C8C4A226988F700F2EB4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0C8C53226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C8C55226988F700F2EB4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0C8C5E226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD0C8C50226988F700F2EB4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD0C8C39226988F500F2EB4F /* PttMonkeysTicketCrawler */;
+			targetProxy = CD0C8C4F226988F700F2EB4F /* PBXContainerItemProxy */;
+		};
+		CD0C8C5B226988F700F2EB4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD0C8C39226988F500F2EB4F /* PttMonkeysTicketCrawler */;
+			targetProxy = CD0C8C5A226988F700F2EB4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD0C8C46226988F700F2EB4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0C8C47226988F700F2EB4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD0C8C60226988F700F2EB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD0C8C61226988F700F2EB4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD0C8C63226988F700F2EB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322833D09154545EBB3EE466 /* Pods-PttMonkeysTicketCrawler.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JK8R39NTVU;
+				INFOPLIST_FILE = PttMonkeysTicketCrawler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PttMonkeysTicketCrawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD0C8C64226988F700F2EB4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28F8E6DC9EE72D2A1C39F789 /* Pods-PttMonkeysTicketCrawler.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JK8R39NTVU;
+				INFOPLIST_FILE = PttMonkeysTicketCrawler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PttMonkeysTicketCrawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD0C8C66226988F700F2EB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27A3191DBD1A428D685B301 /* Pods-PttMonkeysTicketCrawlerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JK8R39NTVU;
+				INFOPLIST_FILE = PttMonkeysTicketCrawlerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PttMonkeysTicketCrawlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PttMonkeysTicketCrawler.app/PttMonkeysTicketCrawler";
+			};
+			name = Debug;
+		};
+		CD0C8C67226988F700F2EB4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603E62213E9CF05030323E87 /* Pods-PttMonkeysTicketCrawlerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JK8R39NTVU;
+				INFOPLIST_FILE = PttMonkeysTicketCrawlerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PttMonkeysTicketCrawlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PttMonkeysTicketCrawler.app/PttMonkeysTicketCrawler";
+			};
+			name = Release;
+		};
+		CD0C8C69226988F700F2EB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EDD0F7733F598730BE4418 /* Pods-PttMonkeysTicketCrawlerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JK8R39NTVU;
+				INFOPLIST_FILE = PttMonkeysTicketCrawlerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PttMonkeysTicketCrawlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PttMonkeysTicketCrawler;
+			};
+			name = Debug;
+		};
+		CD0C8C6A226988F700F2EB4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D00CEE9C5F10733736DE61A /* Pods-PttMonkeysTicketCrawlerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JK8R39NTVU;
+				INFOPLIST_FILE = PttMonkeysTicketCrawlerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PttMonkeysTicketCrawlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PttMonkeysTicketCrawler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD0C8C35226988F500F2EB4F /* Build configuration list for PBXProject "PttMonkeysTicketCrawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0C8C60226988F700F2EB4F /* Debug */,
+				CD0C8C61226988F700F2EB4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD0C8C62226988F700F2EB4F /* Build configuration list for PBXNativeTarget "PttMonkeysTicketCrawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0C8C63226988F700F2EB4F /* Debug */,
+				CD0C8C64226988F700F2EB4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD0C8C65226988F700F2EB4F /* Build configuration list for PBXNativeTarget "PttMonkeysTicketCrawlerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0C8C66226988F700F2EB4F /* Debug */,
+				CD0C8C67226988F700F2EB4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD0C8C68226988F700F2EB4F /* Build configuration list for PBXNativeTarget "PttMonkeysTicketCrawlerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0C8C69226988F700F2EB4F /* Debug */,
+				CD0C8C6A226988F700F2EB4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD0C8C32226988F500F2EB4F /* Project object */;
+}
