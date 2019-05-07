@@ -18,6 +18,7 @@
 		CD0C8C48226988F700F2EB4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0C8C46226988F700F2EB4F /* LaunchScreen.storyboard */; };
 		CD0C8C53226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C8C52226988F700F2EB4F /* PttMonkeysTicketCrawlerTests.swift */; };
 		CD0C8C5E226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C8C5D226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.swift */; };
+		CD0F9C192281DF09003A63B9 /* PPTAsyncSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F9C182281DF09003A63B9 /* PPTAsyncSocket.swift */; };
 		CDB192BF2276C2E700D11BAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB192BE2276C2E700D11BAB /* Alamofire.framework */; };
 		CDB192C12276C2E700D11BAB /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB192C02276C2E700D11BAB /* Kanna.framework */; };
 		D6CE49CC18C45EF308463D24 /* Pods_PttMonkeysTicketCrawlerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3E00A5834E3FC7A092170E /* Pods_PttMonkeysTicketCrawlerUITests.framework */; };
@@ -63,6 +64,7 @@
 		CD0C8C59226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PttMonkeysTicketCrawlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0C8C5D226988F700F2EB4F /* PttMonkeysTicketCrawlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PttMonkeysTicketCrawlerUITests.swift; sourceTree = "<group>"; };
 		CD0C8C5F226988F700F2EB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0F9C182281DF09003A63B9 /* PPTAsyncSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPTAsyncSocket.swift; sourceTree = "<group>"; };
 		CDB192BE2276C2E700D11BAB /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB192C02276C2E700D11BAB /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69918542A831C621CD78924 /* Pods_PttMonkeysTicketCrawlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PttMonkeysTicketCrawlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			children = (
 				CD0C8C3D226988F500F2EB4F /* AppDelegate.swift */,
 				CD0C8C3F226988F500F2EB4F /* MainViewController.swift */,
+				CD0F9C182281DF09003A63B9 /* PPTAsyncSocket.swift */,
 				CD0C8C44226988F700F2EB4F /* Assets.xcassets */,
 				CD0C8C46226988F700F2EB4F /* LaunchScreen.storyboard */,
 				CD0C8C49226988F700F2EB4F /* Info.plist */,
@@ -403,6 +406,7 @@
 				CD037D932272D2C0003CE32A /* DatePickerViewController.swift in Sources */,
 				CD0C8C3E226988F500F2EB4F /* AppDelegate.swift in Sources */,
 				CD037D952272E601003CE32A /* DateSelectorView.swift in Sources */,
+				CD0F9C192281DF09003A63B9 /* PPTAsyncSocket.swift in Sources */,
 				CD037D972272EA00003CE32A /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

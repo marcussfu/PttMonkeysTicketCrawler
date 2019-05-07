@@ -7,6 +7,7 @@ target 'PttMonkeysTicketCrawler' do
 
   pod 'Alamofire'
   pod 'Kanna', '~> 5.0.0'
+  pod 'CocoaAsyncSocket'
 
   target 'PttMonkeysTicketCrawlerTests' do
     inherit! :search_paths

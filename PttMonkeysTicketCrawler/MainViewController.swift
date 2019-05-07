@@ -59,10 +59,14 @@ class MainViewController: UIViewController {
     var filterOutPushTimeList = [String]()
     let targetUrl = "https://www.ptt.cc/bbs/Monkeys/M.1534603045.A.FFC.html"
     
+    var pptAsyncSocket: PPTAsyncSocket?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         scrawlHtmlData()
+        
+        pptAsyncSocket = PPTAsyncSocket(id: "Q305011", password: "Q74012011")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -178,7 +182,7 @@ extension MainViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
 
         let sendAction = UIAlertAction(title: "站內信", style: .destructive) { _ in
-            
+            self.pptAsyncSocket?.connect()
         }
         alertController.addAction(sendAction)
         
@@ -186,6 +190,10 @@ extension MainViewController {
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true)
+    }
+    
+    func sendMail() {
+        
     }
 }
 
