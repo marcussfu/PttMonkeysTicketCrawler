@@ -39,7 +39,7 @@ class DateSelectorView: UIView {
     lazy var selectDateButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = button.titleLabel?.font.withSize(20)
         button.addTarget(self, action: #selector(touchDateSelectButton(_:)), for: .touchUpInside)
         return button
@@ -50,7 +50,7 @@ class DateSelectorView: UIView {
     weak var delegate: DateSelectorViewDelegate?
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor(red: 73.0 / 255.0, green: 201.0 / 255.0, blue: 201.0 / 255.0, alpha: 1.0)
+        backgroundColor = UIColor.black
         nowSelectedDate = Date()
         setConstraints()
     }

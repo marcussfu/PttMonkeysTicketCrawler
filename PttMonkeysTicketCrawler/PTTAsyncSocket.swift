@@ -1,5 +1,5 @@
 //
-//  PPTAsyncSocket.swift
+//  PTTAsyncSocket.swift
 //  PttMonkeysTicketCrawler
 //
 //  Created by marcus fu on 2019/5/7.
@@ -8,18 +8,29 @@
 
 import CocoaAsyncSocket
 
-class PPTAsyncSocket: NSObject {
+protocol PTTAsyncSocketDelegate: class {
+    
+    func createActivityIndicatorView()
+    func removeActivityIndicatorView()
+}
+
+class PTTAsyncSocket: NSObject {
+    weak var delegate: PTTAsyncSocketDelegate?
     var socket: GCDAsyncSocket?
     var id: String?
     var password: String?
+    var sendingMailState = false
     
     let host: String! = "ptt.cc"
     let port: UInt16 = 23
     let big5 = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(CFStringEncodings.big5.rawValue))
     
-    init(id: String = "", password: String = "") {
+    override init() {
         super.init()
         socket = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.main)
+    }
+    
+    func setAccountData(id: String = "", password: String = "") {
         self.id = id
         self.password = password
     }
@@ -29,6 +40,7 @@ class PPTAsyncSocket: NSObject {
             try self.socket?.connect(toHost: host, onPort: port, withTimeout: -1)
             guard let id = self.id else {return}
             guard let password = self.password else {return}
+            delegate?.createActivityIndicatorView()
             pttCommand(id)
             pttCommand(password)
         }
@@ -57,7 +69,7 @@ class PPTAsyncSocket: NSObject {
     }
 }
 
-extension PPTAsyncSocket: GCDAsyncSocketDelegate {
+extension PTTAsyncSocket: GCDAsyncSocketDelegate {
     func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
         print("connected")
     }
@@ -65,7 +77,6 @@ extension PPTAsyncSocket: GCDAsyncSocketDelegate {
     func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
         sock.readData(withTimeout: -1, tag: 0)
         let response = String(data: data, encoding: String.Encoding(rawValue: big5))
-//        print("response:\(String(describing: response))")
         
         if response?.range(of: "密碼不對") != nil {
             print("密碼不對或無此帳號。程式結束")
@@ -93,6 +104,10 @@ extension PPTAsyncSocket: GCDAsyncSocketDelegate {
     }
     
     func sendMail(_ id: String, title: String, content: String) {
+        if sendingMailState {
+            return
+        }
+        sendingMailState = true
         print("發信中...")
         // entry to mail manager page
         pttCommand("m")
@@ -119,11 +134,9 @@ extension PPTAsyncSocket: GCDAsyncSocketDelegate {
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
             print("logout")
             self.socket?.disconnect()
+            self.delegate?.removeActivityIndicatorView()
+            self.sendingMailState = false
         }
-        
-        //        pttCommand("e")
-        //        pttCommand("g")
-        //        pttCommand("y")
     }
 }
 

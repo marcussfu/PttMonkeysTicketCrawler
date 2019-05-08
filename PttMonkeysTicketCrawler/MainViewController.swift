@@ -23,11 +23,9 @@ class MainViewController: UIViewController {
         case both
     }
     
-    
     lazy var dateSelectorView: DateSelectorView = {
         let dateSelectorView = DateSelectorView()
         dateSelectorView.translatesAutoresizingMaskIntoConstraints = false
-//        dateSelectorView.bottomBorder()
         dateSelectorView.delegate = self
         dateSelectorView.configure()
         return dateSelectorView
@@ -46,8 +44,15 @@ class MainViewController: UIViewController {
         tableview.translatesAutoresizingMaskIntoConstraints = false
         tableview.dataSource = self
         tableview.delegate = self
+        tableview.backgroundColor = .black
         view.addSubview(tableview)
         return tableview
+    }()
+    
+    lazy var pttAsyncSocket: PTTAsyncSocket = {
+        let pttAsyncsocket = PTTAsyncSocket()
+        pttAsyncsocket.delegate = self
+        return pttAsyncsocket
     }()
     
     var askDate = Date()
@@ -59,14 +64,15 @@ class MainViewController: UIViewController {
     var filterOutPushTimeList = [String]()
     let targetUrl = "https://www.ptt.cc/bbs/Monkeys/M.1534603045.A.FFC.html"
     
-    var pptAsyncSocket: PPTAsyncSocket?
+    var spinnerController: SpinnerViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         scrawlHtmlData()
         
-        pptAsyncSocket = PPTAsyncSocket(id: "Q305011", password: "Q74012011")
+        pttAsyncSocket.setAccountData(id: "Q305011", password: "Q74012011")
+//        pptAsyncSocket = PPTAsyncSocket(id: "Q305011", password: "Q74012011")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,7 +83,7 @@ class MainViewController: UIViewController {
 extension MainViewController {
     func initView() {
         title = "尋票平台"
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         view.addSubview(self.dateSelectorView)
         setConstraint()
         tableview.tableFooterView = UIView()
@@ -149,12 +155,10 @@ extension MainViewController {
         filterOutContentList.removeAll()
         filterOutPushTimeList.removeAll()
         
-        
         for content in contentList {
-            if checkDate(askDate, content: content) {//content.contains(askDate.toTimeString(format: "M/d")) {
+            if checkDate(askDate, content: content) {
                 if content.contains(askState) {
                     guard let index = contentList.firstIndex(of: content) else { return }
-//                    print(idList[index] + content + pushTimeList[index])
                     filterOutIdList.append(idList[index])
                     filterOutContentList.append(content)
                     filterOutPushTimeList.append(pushTimeList[index])
@@ -182,7 +186,7 @@ extension MainViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
 
         let sendAction = UIAlertAction(title: "站內信", style: .destructive) { _ in
-            self.pptAsyncSocket?.connect()
+            self.pttAsyncSocket.connect()
         }
         alertController.addAction(sendAction)
         
@@ -192,8 +196,32 @@ extension MainViewController {
         present(alertController, animated: true)
     }
     
-    func sendMail() {
+    func presentSendMailOKAlert(_ title: String = "", message: String = "") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
+    }
+}
+
+extension MainViewController: PTTAsyncSocketDelegate {
+    func createActivityIndicatorView() {
+        if spinnerController == nil {
+            spinnerController = SpinnerViewController()
+        }
+        addChild(spinnerController)
+        spinnerController.view.frame = view.frame
+        view.addSubview(spinnerController.view)
+        spinnerController.didMove(toParent: self)
+    }
+    
+    func removeActivityIndicatorView() {
+        spinnerController.willMove(toParent: nil)
+        spinnerController.view.removeFromSuperview()
+        spinnerController.removeFromParent()
+        presentSendMailOKAlert(message: "已寄送站內信")
     }
 }
 
@@ -233,9 +261,8 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
         cell.textLabel?.text = filterOutIdList[indexPath.row] + filterOutContentList[indexPath.row]
-        
+        cell.textLabel?.textColor = .lightGray
+        cell.backgroundColor = .black
         return cell
     }
-    
-    
 }
