@@ -87,6 +87,9 @@ extension MainViewController {
         view.addSubview(self.dateSelectorView)
         setConstraint()
         tableview.tableFooterView = UIView()
+        
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     func setConstraint() {
@@ -101,7 +104,7 @@ extension MainViewController {
         }
         
         NSLayoutConstraint(item: dateSelectorView, attribute: .height, relatedBy: .equal,
-                           toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: UIScreen.main.bounds.size.width * 0.08).isActive = true
+                           toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: UIScreen.main.bounds.size.height * 0.08).isActive = true
         NSLayoutConstraint(item: dateSelectorView, attribute: .leading, relatedBy: .equal,
                            toItem: view, attribute: .leading, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: dateSelectorView, attribute: .trailing, relatedBy: .equal,
@@ -192,6 +195,10 @@ extension MainViewController {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         alertController.addAction(cancelAction)
+        
+        alertController.setValue(NSAttributedString(string: title, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.heavy), NSAttributedString.Key.foregroundColor : UIColor.blue]), forKey: "attributedTitle")
+        
+        alertController.setValue(NSAttributedString(string: message, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.medium), NSAttributedString.Key.foregroundColor : UIColor.black]), forKey: "attributedMessage")
         
         present(alertController, animated: true)
     }
