@@ -7,7 +7,7 @@
 
 ## How
 * 爬蟲的方式去爬ptt.cc的Monkeys版的賣票文，再針對推文以設定的條件去爬出想要的球賽時間與坐位
-  warning (改版中，因為賣票已經集中至 專版CPBL_ticket)
+  * Warning (改版中，因為賣票已經集中至 專版CPBL_ticket)
 * 第三方套件
     - [Alamofire](https://github.com/Alamofire/Alamofire)
     - [Kanna](https://github.com/tid-kijyun/Kanna)
