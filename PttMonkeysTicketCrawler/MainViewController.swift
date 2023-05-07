@@ -71,8 +71,7 @@ class MainViewController: UIViewController {
         initView()
         scrawlHtmlData()
         
-        pttAsyncSocket.setAccountData(id: "Q305011", password: "Q74012011")
-//        pptAsyncSocket = PPTAsyncSocket(id: "Q305011", password: "Q74012011")
+        pttAsyncSocket.setAccountData(id: "", password: "")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -122,9 +121,12 @@ extension MainViewController {
     
     func scrawlHtmlData() {
         guard let url: URL = URL(string: targetUrl) else { return }
-        Alamofire.request(url).responseString { response in
-            if let responseValue = response.result.value {
-                self.parseHTML(responseValue)
+        AF.request(url).responseString { response in
+            switch response.result {
+                case .success(let data):
+                    self.parseHTML(data)
+                case .failure(let error):
+                    print(error)
             }
         }
     }
@@ -149,7 +151,6 @@ extension MainViewController {
         
         DispatchQueue.main.async {
             self.tableview.reloadData()
-            //self.tableview.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
     }
     

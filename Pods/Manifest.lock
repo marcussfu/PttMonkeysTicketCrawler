@@ -1,6 +1,6 @@
 PODS:
-  - Alamofire (4.8.2)
-  - CocoaAsyncSocket (7.6.3)
+  - Alamofire (5.6.4)
+  - CocoaAsyncSocket (7.6.5)
   - Kanna (5.0.0)
 
 DEPENDENCIES:
@@ -9,16 +9,16 @@ DEPENDENCIES:
   - Kanna (~> 5.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - CocoaAsyncSocket
     - Kanna
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   Kanna: a32875df62975f8f4b871e933b4ea1a5c3b8be0f
 
 PODFILE CHECKSUM: e1f6db2963982698666b1f51e96530b829873b18
 
-COCOAPODS: 1.7.0.beta.2
+COCOAPODS: 1.12.0
